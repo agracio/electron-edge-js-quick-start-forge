@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <script>
+            const params = new URLSearchParams(document.location.search);
+            let version =  params.get('version');
+            const electron = params.get('electron');
+            version = version.charAt(0).toUpperCase() + version.substr(1)
+            const namespace = 'QuickStart.' + version + '.dll';
+        </script>
+    <meta charset="UTF-8">
+    <title>electron-edge-js Quick Start</title>
+      <script src="renderer.js"></script>
+      <link rel="stylesheet" href="default.css">
+  </head>
+  <body>
+    <h3 id="test">
+        Quick start for electron-edge-js module using .NET 
+        <script>
+            document.write(version);
+        </script>
+        and Electron 
+        <script>
+            document.write(electron);
+        </script>
+    </h3>
+
+    <table>
+        <tr>
+            <th style="background: #c4d4e5" colspan="2">
+                <strong>
+                    Calling inline c# code
+                </strong>
+            </th>
+        </tr>
+        <tr>
+            <th class="method">Method</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td class="method">GetPersonInfo</td>
+            <td><pre id="getItem"></pre></td>
+        </tr>
+    </table>
+    <br/>
+
+    <table>
+        <tr>
+            <th style="background: #c4d4e5" colspan="2">
+                <strong>
+                    Calling local methods from 
+                    <script>
+                        document.write(namespace)
+                    </script>
+                </strong>
+            </th>
+        </tr>
+        <tr>
+            <th class="method">Method</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td class="method">GetAppDomainDirectory</td>
+            <td><pre id="getAppDomainDirectory"></pre></td>
+        </tr>
+        <tr>
+            <td class="method">GetCurrentTime</td>
+            <td><pre id="getCurrentTime"></pre></td>
+        </tr>
+        <tr>
+            <td class="method">Handle .NET Exception</td>
+            <td><pre id="handleException"></pre></td>
+        </tr>
+        <tr>
+            <td class="method">UseDynamicInput</td>
+            <td><pre id="useDynamicInput"></pre></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <th style="background: #c4d4e5" colspan="2">
+                <strong>
+                    Calling external library methods using
+                    <script>
+                        document.write(namespace)
+                    </script>
+                    wrapper
+                </strong>
+            </th>
+        </tr>
+        <tr>
+            <th class="method">Method</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td class="method">GetPersonInfo</td>
+            <td><pre id="getPerson"></pre></td>
+        </tr>
+    </table>
+  </body>
+</html>

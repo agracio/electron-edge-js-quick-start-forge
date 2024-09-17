@@ -1,0 +1,8 @@
+.idea
+node_modules/
+.vs/
+bin/
+obj/
+/src/.idea
+net8.0
+out/
