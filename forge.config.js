@@ -5,10 +5,11 @@ const fs = require("fs-extra");
 
 module.exports = {
   packagerConfig: {
-    asar: {
-      unpackDir: "net8.0", //  
-    },
+    asar: true ,
     ignore: ["node_modules/electron-edge-js", "node_modules/edge-cs"],
+    extraResource: [
+      "src/QuickStart.Core/bin/Debug/net8.0/",
+    ]
   },
   hooks: {
     postPackage: async (forgeConfig, options) => {

@@ -12,15 +12,12 @@ log.info("EDGE_USE_CORECLR: " + process.env.EDGE_USE_CORECLR);
 
 try {
   log.info(module.paths);
-  let baseNetAppPath = path.join(__dirname, "net8.0");
+  let baseNetAppPath = path.join(__dirname, '/src/QuickStart.Core/bin/Debug/net8.0');
 
   if (__dirname.indexOf("app.asar") !== -1) {
-    baseNetAppPath = path.join(
-      process.resourcesPath,
-      "app.asar.unpacked",
-      "net8.0"
-    );
+    baseNetAppPath = path.join(process.resourcesPath,"net8.0");
   }
+  
   process.env.EDGE_APP_ROOT = baseNetAppPath;
   var edge = require("electron-edge-js");
 
