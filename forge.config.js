@@ -6,12 +6,15 @@ const fs = require("fs-extra");
 module.exports = {
   packagerConfig: {
     asar: true ,
+    // exclude edge-js modules from asar archive
     ignore: ["node_modules/electron-edge-js", "node_modules/edge-cs"],
+    // move binaries to resources folder
     extraResource: [
       "src/QuickStart.Core/bin/Debug/net8.0/",
     ]
   },
   hooks: {
+    // copy "node_modules/electron-edge-js" and "node_modules/edge-cs" to resources folder
     postPackage: async (forgeConfig, options) => {
       console.log("build_path", options.outputPaths);
       const outdir = options.outputPaths[0];
@@ -35,6 +38,7 @@ module.exports = {
     },
   },
   rebuildConfig: {
+    // exclude any Node.js pre-build modules such as electron-edge-js from rebuild
     onlyModules: [],
   },
   makers: [
