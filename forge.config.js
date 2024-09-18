@@ -17,7 +17,7 @@ module.exports = {
       const outdir = options.outputPaths[0];
       console.log("outdir", outdir);
       // Get node_modules path
-      const nodeModulesPath = path.join(outdir, "resources", "node_modules"); // 目标路径
+      const nodeModulesPath = path.join(outdir, "resources", "node_modules"); 
       const modulesToCopy = ["edge-cs", "electron-edge-js"];
       // loop-for  
       for (const moduleName of modulesToCopy) {
