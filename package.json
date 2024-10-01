@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "electron-forge example for electron-edge-js-quick-start",
   "main": "main.js",
+  "author": {
+    "name": "agracio"
+  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
