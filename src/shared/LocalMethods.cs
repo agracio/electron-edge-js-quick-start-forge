@@ -19,7 +19,8 @@ namespace QuickStart
 
         public async Task<object> UseDynamicInput(dynamic input)
         {
-            return $".NET {input.framework} welcomes {input.node}";
+            var dict = (IDictionary<string, object>)input;
+            return $".NET {dict["framework"]} welcomes {dict["node"]}";
         }
         public async Task<object> ThrowException(dynamic input)
         {
@@ -28,7 +29,8 @@ namespace QuickStart
         
         public async Task<object> ListCertificates(dynamic input)
         {
-            X509Store store = new X509Store((string)input.storeName, (StoreLocation)Enum.Parse(typeof(StoreLocation), (string)input.storeLocation));
+            var dict = (IDictionary<string, object>)input;
+            X509Store store = new X509Store((string)dict["storeName"], (StoreLocation)Enum.Parse(typeof(StoreLocation), (string)dict["storeLocation"]));
             store.Open(OpenFlags.ReadOnly);
             try
             {
