@@ -10,7 +10,6 @@ namespace QuickStart
         {
             var dict = (IDictionary<string, object>)input;
             return await Task.Run(() => new Person(dict["name"].ToString(), dict["email"].ToString(), (int)dict["age"]));
-            return await Task.Run(() => new Person(input.name, input.email, input.age));
         }
     }
 }
