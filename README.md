@@ -12,7 +12,7 @@ https://github.com/agracio/electron-edge-js-quick-start/issues/19
 ## electron-edge-js-quick-start
 
 1. Install dependencies `npm install`
-2. Build dotnet project `dotnet build src/QuickStart.sln`
+2. Build dotnet project `dotnet restore src/QuickStart.sln && dotnet build src/QuickStart.sln`
 3. Run app using electron-forge `npm start`
 
 ## Package
