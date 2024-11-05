@@ -5,14 +5,13 @@ const path = require("path");
 var net = 'core';
 var framework = net.charAt(0).toUpperCase() + net.substr(1);
 log.info("framework: " + framework);
-process.env.NODE_PATH;
-log.info("NODE_PATH: " + process.env.NODE_PATH);
 process.env.EDGE_USE_CORECLR = 1;
 log.info("EDGE_USE_CORECLR: " + process.env.EDGE_USE_CORECLR);
 
 try {
   log.info(module.paths);
   let baseNetAppPath = path.join(__dirname, '/src/QuickStart.Core/bin/Debug/net8.0');
+  //let baseNetAppPath = path.join(__dirname, '/src/QuickStart.Core/bin/Release/net8.0/win-x64/publish');
 
   if (__dirname.indexOf("app.asar") !== -1) {
     baseNetAppPath = path.join(process.resourcesPath,"net8.0");
@@ -94,6 +93,7 @@ try {
   process.exit(1);
 }
 exports.run = function (window) {
+
   getInlinePerson(
     {
       name: "Peter Smith",
@@ -109,10 +109,12 @@ exports.run = function (window) {
       );
     }
   );
+  
   getAppDomainDirectory("", function (error, result) {
     if (error) throw error;
     window.webContents.send("fromMain", "getAppDomainDirectory", result);
   });
+
   getCurrentTime("", function (error, result) {
     if (error) throw error;
     window.webContents.send("fromMain", "getCurrentTime", result);
