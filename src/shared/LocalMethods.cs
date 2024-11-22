@@ -29,8 +29,7 @@ namespace QuickStart
         
         public async Task<object> ListCertificates(dynamic input)
         {
-            var dict = (IDictionary<string, object>)input;
-            X509Store store = new X509Store((string)dict["storeName"], (StoreLocation)Enum.Parse(typeof(StoreLocation), (string)dict["storeLocation"]));
+            X509Store store = new X509Store((string)input.storeName, (StoreLocation)Enum.Parse(typeof(StoreLocation), (string)input.storeLocation));
             store.Open(OpenFlags.ReadOnly);
             try
             {
