@@ -1,11 +1,10 @@
-## electron-forge example based on `electron-edge-js-quick-start`<br/>  https://github.com/agracio/electron-edge-js-quick-start
+## electron-forge example based on [electron-edge-js-quick-start](https://github.com/agracio/electron-edge-js-quick-start)
 
 ### Credit 
-https://github.com/eug3/e  
-https://github.com/agracio/electron-edge-js-quick-start/issues/19
+- https://github.com/eug3/e  
+- https://github.com/agracio/electron-edge-js-quick-start/issues/19
 
 ------------------
-
 #### NOTE: This functionality was only tested on Windows
 ------------------
 
