@@ -7,7 +7,8 @@ module.exports = {
   packagerConfig: {
     asar: true ,
     // exclude edge-js modules from asar archive
-    ignore: ["node_modules/electron-edge-js", "node_modules/edge-cs"],
+    ignore: ["node_modules/electron-edge-js", "node_modules/edge-cs", ".vscode", "src/.idea", "src/ExternalLibrary", "src/QuickStart.Core", "src/shared", "src/QuickStart.sln", ".gitignore", "README.md", ".github"],
+    // ignore: ["node_modules/electron-edge-js", "node_modules/edge-cs"],
     // move binaries to resources folder
     extraResource: [
       "src/QuickStart.Core/bin/Debug/net8.0/",
