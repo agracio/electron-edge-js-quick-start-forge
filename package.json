@@ -23,20 +23,20 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "electron-edge-js": "^38.0.0",
+    "electron-edge-js": "^40.0.1",
     "electron-log": "^5.4.3",
     "electron-squirrel-startup": "^1.0.1",
-    "fs-extra": "^11.3.1"
+    "fs-extra": "^11.3.3"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^7.8.3",
-    "@electron-forge/maker-deb": "^7.8.3",
-    "@electron-forge/maker-rpm": "^7.8.3",
-    "@electron-forge/maker-squirrel": "^7.8.3",
-    "@electron-forge/maker-zip": "^7.8.3",
-    "@electron-forge/plugin-auto-unpack-natives": "^7.8.3",
-    "@electron-forge/plugin-fuses": "^7.8.3",
+    "@electron-forge/cli": "^7.11.1",
+    "@electron-forge/maker-deb": "^7.11.1",
+    "@electron-forge/maker-rpm": "^7.11.1",
+    "@electron-forge/maker-squirrel": "^7.11.1",
+    "@electron-forge/maker-zip": "^7.11.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
+    "@electron-forge/plugin-fuses": "^7.11.1",
     "@electron/fuses": "^1.8.0",
-    "electron": "^38.0.0"
+    "electron": "^40.1.0"
   }
 }
